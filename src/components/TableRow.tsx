@@ -1,15 +1,7 @@
 import "../index.css";
+import { TableRowType } from "../types/allTypes";
 
-const Table = ({
-	name,
-	data,
-	rowName,
-}: {
-	key: number | string;
-	name: string;
-	data: number[];
-	rowName: string;
-}) => {
+const TableRow = ({ name, data, rowName }: TableRowType) => {
 	return (
 		<tr>
 			<td>
@@ -22,4 +14,4 @@ const Table = ({
 		</tr>
 	);
 };
-export default Table;
+export default TableRow;
