@@ -13,6 +13,6 @@ http://localhost:5173/
 
 
 ## App ScreenShot
-![image](https://github.com/SuryanshuTomar/WineAppTest/assets/88129633/b9b3e815-e1cb-4a04-a2f9-29a94157e409)
+![image](https://github.com/SuryanshuTomar/WineAppTest/assets/88129633/13d4cb23-caa4-4545-aad4-d0d9c6f43339)
 
 Enjoy!!!
