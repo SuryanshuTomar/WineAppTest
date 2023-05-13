@@ -8,19 +8,34 @@ export const calcMeanMedianMode = (
 ) => {
 	const classWineData = data.filter((wine) => wine.Alcohol === classNumber);
 	const classWineLength = classWineData.length;
+
 	const calcMean: number =
 		classWineData.reduce((acc, wine) => acc + Number(wine[property]), 0) /
 		classWineLength;
 
+	const medianRawData: number[] = classWineData
+		.map((data) => +data[property])
+		.sort((a, b) => +a - +b);
+
 	let calcMedian: number;
 	if (classWineLength % 2 === 0) {
 		calcMedian =
-			(Number(classWineData[classWineLength / 2][property]) +
-				Number(classWineData[classWineLength / 2 + 1][property])) /
+			(medianRawData[classWineLength / 2 - 1] +
+				medianRawData[classWineLength / 2]) /
 			2;
 	} else {
-		calcMedian = Number(classWineData[(classWineLength + 1) / 2][property]);
+		calcMedian = medianRawData[(classWineLength + 1) / 2 - 1];
 	}
+
+	// Depricated code-
+	// if (classWineLength % 2 === 0) {
+	// 	calcMedian =
+	// 		(Number(classWineData[classWineLength / 2][property]) +
+	// 			Number(classWineData[classWineLength / 2 + 1][property])) /
+	// 		2;
+	// } else {
+	// 	calcMedian = Number(classWineData[(classWineLength + 1) / 2][property]);
+	// }
 
 	const modeCounter: { [key: string]: number } = {};
 	for (const wine of classWineData) {
