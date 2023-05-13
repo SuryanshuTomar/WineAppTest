@@ -11,4 +11,8 @@ yarn run dev
 ### Step 3: Open the browser and paste the below url -
 http://localhost:5173/
 
+
+## App ScreenShot
+![image](https://github.com/SuryanshuTomar/WineAppTest/assets/88129633/b9b3e815-e1cb-4a04-a2f9-29a94157e409)
+
 Enjoy!!!
